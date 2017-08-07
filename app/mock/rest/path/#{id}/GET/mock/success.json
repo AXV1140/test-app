@@ -1,0 +1,22 @@
+<%
+
+var data = {};
+
+var init = params.id;
+
+    switch (init) {
+        case '1':
+        data = response[init];
+        console.log("I am " + init);
+        break;
+        case '2':
+        data = response['error'];
+        console.log("I am " + init);
+        break;  
+        default:
+        data= response['error-401'];
+            break;
+    }
+%>
+
+<%-JSON.stringify(data);%>

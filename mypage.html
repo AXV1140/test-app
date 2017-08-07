@@ -1,0 +1,39 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/styles.css">
+<title>Mustache Demo</title>
+</head>
+<body>
+  <h1>{{title}}</h1>
+  <button onclick="testClick()">Click me</button>
+  <!-- <section class="demo">
+    <a href="/" class="btn btn-lg btn-primary">Home Page</a>
+    <a href="/contact" class="btn btn-lg btn-primary">Next</a>
+    <div class="demo-content">
+      <h2>Welcome to the Delta!</h2>
+      </div>
+  </section> -->
+<ul>
+{{#records}}
+<li >Company: {{company}} </li>
+<li>Name of Employee: {{name}}</li>
+<li>
+<ul>
+{{#data}}
+<li>{{pos}}</li>
+{{/data}}
+</ul>
+</li>
+{{/records}}
+</ul>
+</body>
+<script>
+function testClick(){
+  alert("Hiii");
+
+};
+</script>
+</html>
